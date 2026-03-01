@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Отклик сердца</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400&family=Marck+Script&display=swap" rel="stylesheet">
+
+<style>
+
+:root {
+  --bg: #F3EEE7;
+  --accent: #8B1E2D;
+  --text: #1c1c1c;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg);
+  font-family: 'Inter', sans-serif;
+  color: var(--text);
+}
+
+.container {
+  max-width: 420px;
+  margin: 0 auto;
+  padding: 30px 20px 80px;
+}
+
+/* NAV */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  margin-bottom: 40px;
+  opacity: 0.8;
+}
+
+/* HERO */
+
+.hero {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 46px;
+  line-height: 1;
+  position: relative;
+}
+
+.hero-title span {
+  color: var(--accent);
+  position: absolute;
+  right: 0;
+  top: 20px;
+}
+
+.hero img {
+  width: 100%;
+  margin-top: 40px;
+  transform: rotate(-4deg);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.script {
+  font-family: 'Marck Script', cursive;
+  font-size: 24px;
+  margin: 30px 0;
+  text-align: center;
+}
+
+.button {
+  display: block;
+  text-align: center;
+  padding: 14px;
+  background: var(--accent);
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  margin-top: 20px;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 20px;
+}
+
+/* SECTION */
+
+.section {
+  margin-top: 80px;
+}
+
+.section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 40px;
+  margin-bottom: 30px;
+}
+
+.section img {
+  width: 70%;
+  transform: rotate(3deg);
+  margin-bottom: 20px;
+}
+
+.section p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+
+/* Decorative line */
+
+.line {
+  width: 100px;
+  height: 1px;
+  background: var(--accent);
+  margin: 40px auto;
+  position: relative;
+}
+
+.line::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  position: absolute;
+  right: -6px;
+  top: -5px;
+}
+
+/* HEART */
+
+.heart {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.heart svg {
+  width: 40px;
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 1.5;
+}
+
+/* RED BLOCK */
+
+.red-block {
+  background: var(--accent);
+  color: white;
+  padding: 30px 20px;
+  border-radius: 25px;
+  margin-top: 40px;
+}
+
+.red-block p {
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+
+.footer-note {
+  margin-top: 60px;
+  font-size: 12px;
+  opacity: 0.6;
+  text-align: center;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<nav>
+  <div>Обо мне</div>
+  <div>О проекте</div>
+  <div>Отзывы</div>
+  <div>FAQ</div>
+</nav>
+
+<div class="hero">
+  <div class="hero-title">
+    ОТКЛИК
+    <span>СЕРДЦА</span>
+  </div>
+
+  <img src="hero.jpg" alt="hero">
+
+  <div class="script">
+    самый душевный и бережный проект
+  </div>
+
+  <a href="#" class="button">Присоединиться</a>
+</div>
+
+<div class="section">
+  <h2>ОБО МНЕ</h2>
+
+  <img src="about.jpg" alt="about">
+
+  <p>Я дипломированный психолог и точно чувствую людей.</p>
+  <p>Работаю с голосом, душой и телом.</p>
+  <p>Открываю красоту и таланты в девушках.</p>
+</div>
+
+<div class="line"></div>
+
+<div class="heart">
+<svg viewBox="0 0 24 24">
+  <path d="M12 21s-6-4.35-9-8.5C-1 7 4 2 8 6c1 1 2 2 4 4 2-2 3-3 4-4 4-4 9 1 5 6.5C18 16.65 12 21 12 21z"/>
+</svg>
+</div>
+
+<div class="section">
+  <h2>О ПРОЕКТЕ</h2>
+
+  <div class="red-block">
+    <p>❤ Самые мощные практики.</p>
+    <p>❤ Глубокая трансформация.</p>
+    <p>❤ Поддержка и бережность.</p>
+  </div>
+</div>
+
+<div class="footer-note">
+  если хочешь такую же футболку, пиши: @твойконтакт
+</div>
+
+</div>
+
+</body>
+</html>
