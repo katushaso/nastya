@@ -1,154 +1,77 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Привет, я — Настя</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<title>Настя</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-
-@font-face {
-  font-family: 'Gogol';
-  src: url('fonts/Gogol.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
 :root {
-  --bg: #F3EEE7;
-  --accent: #8B1E2D;
-  --text: #1a1a1a;
+  --accent: #C1121F;
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--bg);
   font-family: 'Montserrat', sans-serif;
-  color: var(--text);
+  background: #ffffff;
+  color: var(--accent);
 }
 
-/* ===== ОБЩИЕ ОТСТУПЫ ===== */
-
-.section-padding {
-  padding: 60px 8vw;
-}
-
-/* ===== NAV ===== */
-
-nav {
+header {
   display: flex;
   justify-content: center;
-  gap: 80px;
-  font-size: 14px;
+  gap: 60px;
+  padding: 30px 0;
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
   letter-spacing: 2px;
 }
 
-nav a {
+header a {
   text-decoration: none;
-  color: inherit;
-  transition: 0.3s;
+  color: var(--accent);
+  font-size: 14px;
 }
 
-nav a:hover {
-  opacity: 0.6;
+.section {
+  padding: 60px 8vw;
+  max-width: 1200px;
+  margin: auto;
 }
 
-/* ===== HERO ===== */
+h1, h2 {
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  letter-spacing: 3px;
+}
 
 .hero {
-  display: grid;
-  grid-template-columns: 1.3fr 0.7fr;
-  align-items: center;
-  min-height: 85vh;
+  text-align: center;
+  padding: 80px 8vw 40px;
 }
 
-.hero-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(70px, 9vw, 150px);
-  line-height: 0.9;
+.hero h1 {
+  font-size: 48px;
 }
 
-.hero-title span {
-  color: var(--accent);
-  display: block;
-  margin-left: 10vw;
-}
-
-.script {
-  font-family: 'Gogol', cursive;
-  font-size: 30px;
-  margin: 40px 0 60px;
-  max-width: 600px;
-}
-
-/* ===== HERO IMAGES ===== */
-
-.hero-images {
-  position: relative;
-  height: 65vh;
-}
-
-.hero-images img {
-  position: absolute;
-  width: 28vw;
-  max-width: 500px;
-  box-shadow: 0 40px 80px rgba(0,0,0,0.2);
-}
-
-.img-1 {
-  top: 0;
-  left: 0;
-  transform: rotate(-6deg);
-}
-
-.img-2 {
-  bottom: 0;
-  right: 0;
-  transform: rotate(6deg);
-}
-
-/* ===== ABOUT ===== */
-
-.about {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  align-items: center;
-  gap: 8vw;
-}
-
-.about h2 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(50px, 6vw, 100px);
-  margin-bottom: 50px;
-}
-
-.about p {
+.about-text {
   font-size: 18px;
-  line-height: 1.9;
-  max-width: 600px;
-  margin-bottom: 18px;
+  line-height: 1.7;
+  max-width: 800px;
+  margin: auto;
 }
-
-.about img {
-  width: 30vw;
-  max-width: 520px;
-  transform: rotate(4deg);
-  box-shadow: 0 40px 80px rgba(0,0,0,0.2);
-}
-
-/* ===== RED BLOCK ===== */
 
 .red-block {
   background: var(--accent);
-  color: white;
   padding: 120px 10vw;
   display: flex;
   justify-content: center;
@@ -159,122 +82,93 @@ nav a:hover {
   width: 100%;
 }
 
+.red-block h2 {
+  color: white;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
 .red-block p {
   font-family: 'Montserrat', sans-serif;
   font-size: 22px;
   margin-bottom: 25px;
   text-align: left;
+  color: white;
 }
 
-/* ===== FOOTER ===== */
-
-.footer-note {
+.footer {
   text-align: center;
-  padding: 100px 8vw;
-  font-size: 32px;
-  font-family: 'Gogol', cursive;
+  padding: 60px 20px;
 }
 
-/* ===== MOBILE ===== */
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 30px;
+  border: 1px solid var(--accent);
+  text-decoration: none;
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--accent);
+}
 
-@media (max-width: 1000px) {
+.button:hover {
+  background: var(--accent);
+  color: white;
+  transition: 0.3s;
+}
 
-  .hero {
-    grid-template-columns: 1fr;
-    gap: 60px;
-    min-height: auto;
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 34px;
   }
-
-  .hero-images {
-    position: static;
-    height: auto;
-  }
-
-  .hero-images img {
-    position: static;
-    width: 100%;
-    margin-bottom: 20px;
-  }
-
-  .about {
-    grid-template-columns: 1fr;
-  }
-
-  .about img {
-    width: 100%;
-  }
-
-  nav {
+  header {
     gap: 30px;
   }
-
 }
-
 </style>
 </head>
 
 <body>
 
-<div class="section-padding">
-<nav>
-  <a href="#about">Обо мне</a>
-  <a href="#withme">Со мной можно</a>
-  <a href="#contact">Погнали</a>
-</nav>
-</div>
+<header>
+  <a href="#about">ОБО МНЕ</a>
+  <a href="#withme">СО МНОЙ МОЖНО</a>
+  <a href="#go">ПОГНАЛИ</a>
+</header>
 
-<div class="hero section-padding">
+<section class="hero">
+  <h1>ПРИВЕТ, Я — НАСТЯ</h1>
+</section>
 
-  <div>
-    <div class="hero-title">
-      Привет,
-      <span>я — Настя</span>
-    </div>
-
-    <div class="script">
-      Если ты это читаешь, значит, ты всё-таки навёл камеру.
-      Мне нравятся люди, которые действуют.
-    </div>
+<section class="section" id="about">
+  <h2>ОБО МНЕ</h2>
+  <div class="about-text">
+    Мне сложно усидеть на месте. Тренирую фигурному катанию.  
+    Бегаю, катаюсь на горных лыжах, люблю велосипед и дорогу без пробок.  
+    Вожу машину и люблю скорость. Не ради риска, а ради ощущения жизни.  
+    Люблю путешествия. И спонтанные, и запланированные.  
+    Люблю хорошие рестораны за атмосферу, внимание к деталям и ощущение, когда всё сделано с уважением к человеку.
   </div>
+</section>
 
-  <div class="hero-images">
-    <img src="hero1.jpg" class="img-1">
-    <img src="hero2.jpg" class="img-2">
-  </div>
-
-</div>
-
-<div class="about section-padding" id="about">
-
-  <div>
-    <h2>Обо мне</h2>
-
-    <p>Мне сложно усидеть на месте.</p>
-    <p>Тренирую фигурному катанию. Бегаю, катаюсь на горных лыжах, люблю велосипед и дорогу без пробок.</p>
-    <p>Вожу машину и люблю скорость. Не ради риска, а ради ощущения жизни.</p>
-    <p>Люблю путешествия. И спонтанные, и запланированные.</p>
-    <p>Люблю хорошие рестораны за атмосферу, внимание к деталям и ощущение, когда всё сделано с уважением к человеку.</p>
-  </div>
-
-  <div>
-    <img src="hero3.jpg">
-  </div>
-
-</div>
-
-<div class="red-block" id="withme">
+<section class="red-block" id="withme">
   <div class="red-block-inner">
+    <h2>СО МНОЙ МОЖНО</h2>
     <p>❤ спонтанно улететь в поездку</p>
     <p>❤ пробежать утренние 5 км</p>
     <p>❤ уехать куда-нибудь без лишних слов</p>
     <p>❤ выбрать лучший десерт в городе</p>
     <p>❤ и просто смеяться</p>
   </div>
-</div>
+</section>
 
-<div class="footer-note" id="contact">
-  Если ты чувствуешь скорость жизни так же, возможно нам по пути.
-</div>
+<section class="section footer" id="go">
+  <h2>ПОГНАЛИ</h2>
+  <p>Если ты чувствуешь скорость жизни так же, возможно нам по пути.</p>
+  <a href="#" class="button">Instagram</a>
+</section>
 
 </body>
 </html>
