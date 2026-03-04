@@ -51,7 +51,7 @@ header a {
 /* HERO */
 .hero {
   text-align: center;
-  padding: 80px 8vw 40px; /* больше верхний отступ */
+  padding: 60px 8vw 20px; /* чуть меньше снизу */
 }
 
 .hero-image {
@@ -60,7 +60,7 @@ header a {
   justify-content: center;
   width: 100%;
   max-width: 420px;
-  margin: 0 auto 40px;
+  margin: 0 auto 20px; /* промежуток меньше */
 }
 
 .hero-image img {
@@ -73,11 +73,11 @@ header a {
 /* Заголовок поверх фото */
 .hero-text {
   position: absolute;
-  top: 10%; /* выше */
-  left: 10%; 
-  right: 10%;
+  top: 5%; /* выше */
+  left: 5%; 
+  right: 5%;
   display: flex;
-  justify-content: space-between; /* разнести по сторонам */
+  justify-content: space-between;
   width: 100%;
   color: var(--accent);
   text-transform: uppercase;
@@ -94,21 +94,20 @@ header a {
 }
 
 /* Гоголь-текст */
-.gogol-text,
-.gogol-text * {
+.gogol-text {
   font-family: 'Gogol', cursive !important;
   font-size: 26px;
-  margin-top: 30px;
+  margin-top: 20px; /* меньше отступ */
   line-height: 1.6;
 }
 
 /* Верхняя кнопка СВЯЗАТЬСЯ */
 .gogol-text .button {
-  margin-top: 20px;
+  margin-top: 15px;
   display: inline-block;
   padding: 14px 32px;
   text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif; /* теперь Montserrat */
   font-weight: 500;
   font-size: 16px;
   background: var(--accent);
@@ -131,7 +130,7 @@ header a {
   font-weight: 400;
   font-size: 60px;
   text-align: center;
-  margin: 100px 0 40px;
+  margin: 60px 0 30px; /* меньше отступ сверху и снизу */
   color: var(--accent);
 }
 
@@ -145,7 +144,7 @@ header a {
 .about-row {
   display: flex;
   align-items: center;
-  gap: 60px;
+  gap: 40px; /* меньше между фото и текстом */
 }
 
 .about-row img {
@@ -161,16 +160,16 @@ header a {
 }
 
 .about-text p {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 /* Travel row */
 .travel-row {
   display: flex;
   align-items: center;
-  gap: 60px;
-  margin-top: 80px;
-  overflow: visible; /* чтобы фото вылезало за экран */
+  gap: 40px; /* меньше промежуток */
+  margin-top: 40px; /* меньше сверху */
+  overflow: visible;
 }
 
 .travel-text {
@@ -183,8 +182,8 @@ header a {
   width: 350px;
   height: 466px;
   object-fit: cover;
-  transform: rotate(15deg); /* угол больше, немного вылезает */
-  margin-left: auto; /* уголочком справа */
+  transform: rotate(15deg);
+  margin-left: auto;
 }
 
 /* СО МНОЙ МОЖНО */
@@ -194,20 +193,20 @@ header a {
   font-weight: 400;
   font-size: 60px;
   text-align: center;
-  margin-top: 120px;
+  margin: 60px 0 40px; /* меньше отступы */
   color: var(--accent);
 }
 
 .red-wrapper {
   display: flex;
   justify-content: center;
-  padding: 40px 20px 80px;
+  padding: 20px 20px 60px; /* меньше сверху и снизу */
 }
 
 .red-block {
   background: var(--accent);
   border-radius: 30px;
-  padding: 80px 60px;
+  padding: 60px 50px; /* меньше padding */
   max-width: 700px;
   width: 100%;
 }
@@ -215,13 +214,13 @@ header a {
 .red-block p {
   color: white;
   font-size: 22px;
-  margin-bottom: 25px;
+  margin-bottom: 15px;
 }
 
 /* Футер */
 .footer {
   text-align: center;
-  padding: 80px 20px;
+  padding: 60px 20px; /* меньше padding */
 }
 
 .footer h2 {
@@ -229,13 +228,13 @@ header a {
   font-weight: 400;
   font-size: 60px;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   color: var(--accent);
 }
 
 .footer p {
   max-width: 700px;
-  margin: 0 auto 30px;
+  margin: 0 auto 20px;
   font-size: 26px;
   font-family: 'Gogol', cursive;
 }
@@ -279,7 +278,7 @@ header a {
   }
 
   .hero-text {
-    top: 15%;
+    top: 5%;
     flex-direction: column;
     justify-content: center;
     left: 0;
