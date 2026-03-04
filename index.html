@@ -35,16 +35,18 @@ body {
   color: var(--text);
 }
 
+/* ===== ОБЩИЕ ОТСТУПЫ ===== */
+
 .section-padding {
-  padding: 100px 8vw;
+  padding: 60px 8vw;
 }
 
-/* NAV */
+/* ===== NAV ===== */
 
 nav {
   display: flex;
   justify-content: center;
-  gap: 100px;
+  gap: 80px;
   font-size: 14px;
   letter-spacing: 2px;
 }
@@ -59,13 +61,13 @@ nav a:hover {
   opacity: 0.6;
 }
 
-/* HERO */
+/* ===== HERO ===== */
 
 .hero {
   display: grid;
   grid-template-columns: 1.3fr 0.7fr;
   align-items: center;
-  min-height: 90vh;
+  min-height: 85vh;
 }
 
 .hero-title {
@@ -87,11 +89,11 @@ nav a:hover {
   max-width: 600px;
 }
 
-/* HERO IMAGES */
+/* ===== HERO IMAGES ===== */
 
 .hero-images {
   position: relative;
-  height: 70vh;
+  height: 65vh;
 }
 
 .hero-images img {
@@ -113,26 +115,26 @@ nav a:hover {
   transform: rotate(6deg);
 }
 
-/* ABOUT */
+/* ===== ABOUT ===== */
 
 .about {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  gap: 10vw;
+  gap: 8vw;
 }
 
 .about h2 {
   font-family: 'Playfair Display', serif;
   font-size: clamp(50px, 6vw, 100px);
-  margin-bottom: 60px;
+  margin-bottom: 50px;
 }
 
 .about p {
   font-size: 18px;
   line-height: 1.9;
   max-width: 600px;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
 }
 
 .about img {
@@ -142,30 +144,38 @@ nav a:hover {
   box-shadow: 0 40px 80px rgba(0,0,0,0.2);
 }
 
-/* RED BLOCK */
+/* ===== RED BLOCK ===== */
 
 .red-block {
   background: var(--accent);
   color: white;
-  text-align: center;
-  padding: 150px 10vw;
+  padding: 120px 10vw;
+  display: flex;
+  justify-content: center;
+}
+
+.red-block-inner {
+  max-width: 600px;
+  width: 100%;
 }
 
 .red-block p {
-  font-size: 24px;
-  margin-bottom: 30px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  margin-bottom: 25px;
+  text-align: left;
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 
 .footer-note {
   text-align: center;
-  padding: 120px 8vw;
+  padding: 100px 8vw;
   font-size: 32px;
   font-family: 'Gogol', cursive;
 }
 
-/* MOBILE */
+/* ===== MOBILE ===== */
 
 @media (max-width: 1000px) {
 
@@ -253,11 +263,13 @@ nav a:hover {
 </div>
 
 <div class="red-block" id="withme">
-  <p>❤ спонтанно улететь в поездку</p>
-  <p>❤ пробежать утренние 5 км</p>
-  <p>❤ уехать куда-нибудь без лишних слов</p>
-  <p>❤ выбрать лучший десерт в городе</p>
-  <p>❤ и просто смеяться</p>
+  <div class="red-block-inner">
+    <p>❤ спонтанно улететь в поездку</p>
+    <p>❤ пробежать утренние 5 км</p>
+    <p>❤ уехать куда-нибудь без лишних слов</p>
+    <p>❤ выбрать лучший десерт в городе</p>
+    <p>❤ и просто смеяться</p>
+  </div>
 </div>
 
 <div class="footer-note" id="contact">
