@@ -48,17 +48,8 @@ header a {
   padding: 60px 8vw 40px;
 }
 
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  font-size: 48px;
-  margin-bottom: 50px;
-}
-
-/* ПЕРВАЯ ФОТО */
-
 .hero-image {
+  position: relative;
   display: flex;
   justify-content: center;
 }
@@ -68,10 +59,37 @@ header a {
   transform: rotate(-6deg);
 }
 
+/* Текст поверх фото */
+.hero-text {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  color: var(--accent);
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400; /* не жирный */
+}
+
+.hero-text .hello {
+  font-size: 60px;
+  display: block;
+}
+
+.hero-text .name {
+  font-size: 48px;
+  display: block;
+  margin-top: -10px;
+}
+
 .gogol-text {
   font-family: cursive;
   font-size: 26px;
   margin-top: 30px;
+}
+
+/* Кнопка под текстом */
+.gogol-text .button {
+  margin-top: 20px;
 }
 
 /* ОБО МНЕ */
@@ -148,7 +166,25 @@ header a {
   margin-bottom: 25px;
 }
 
-/* ПОГНАЛИ */
+/* КНОПКИ */
+
+.button {
+  display: inline-block;
+  padding: 14px 32px;
+  border: 1px solid var(--accent);
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--accent);
+  transition: 0.3s;
+  border-radius: 12px;
+}
+
+.button:hover {
+  background: var(--accent);
+  color: var(--light);
+}
+
+/* ФУТЕР */
 
 .footer {
   text-align: center;
@@ -166,21 +202,6 @@ header a {
   max-width: 700px;
   margin: 0 auto 30px;
   font-size: 18px;
-}
-
-.button {
-  display: inline-block;
-  padding: 14px 32px;
-  border: 1px solid var(--accent);
-  text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
-  color: var(--accent);
-  transition: 0.3s;
-}
-
-.button:hover {
-  background: var(--accent);
-  color: var(--light);
 }
 
 /* АДАПТИВ */
@@ -203,6 +224,19 @@ header a {
   .gogol-text {
     font-size: 22px;
   }
+
+  .hero-text {
+    top: 15%;
+    left: 10%;
+  }
+
+  .hero-text .hello {
+    font-size: 40px;
+  }
+
+  .hero-text .name {
+    font-size: 32px;
+  }
 }
 </style>
 </head>
@@ -216,14 +250,18 @@ header a {
 </header>
 
 <section class="hero">
-  <h1>ПРИВЕТ, Я — НАСТЯ</h1>
-
   <div class="hero-image">
     <img src="img/21.jpg" alt="">
+    <div class="hero-text">
+      <span class="hello">ПРИВЕТ,</span>
+      <span class="name">Я — НАСТЯ</span>
+    </div>
   </div>
 
   <div class="gogol-text">
     Если ты это читаешь, значит, ты всё-таки навёл камеру. Мне нравятся люди, которые действуют.
+    <br>
+    <a href="https://www.instagram.com/nastia_mois77/" class="button" target="_blank">INSTAGRAM</a>
   </div>
 </section>
 
@@ -233,7 +271,10 @@ header a {
     <img src="img/2.jpg" alt="">
     <div class="about-text">
       <p>
-        Мне сложно усидеть на месте. Тренирую фигурному катанию. Бегаю, катаюсь на горных лыжах, люблю велосипед и дорогу без пробок. Вожу машину и люблю скорость. Не ради риска, а ради ощущения жизни. Ценю хорошие рестораны за атмосферу, внимание к деталям и ощущение, когда всё сделано с уважением к человеку.
+        Мне сложно усидеть на месте. Тренирую фигурному катанию. Бегаю, катаюсь на горных лыжах, люблю велосипед и дорогу без пробок.
+      </p>
+      <p>
+        Вожу машину и люблю скорость. Не ради риска, а ради ощущения жизни. Ценю хорошие рестораны за атмосферу, внимание к деталям и ощущение, когда всё сделано с уважением к человеку.
       </p>
     </div>
   </div>
@@ -264,7 +305,7 @@ header a {
   <p>
     Если ты чувствуешь скорость жизни так же, возможно нам по пути.
   </p>
-  <a href="#" class="button">Связаться</a>
+  <a href="https://www.instagram.com/nastia_mois77/" class="button" target="_blank">INSTAGRAM</a>
 </section>
 
 </body>
