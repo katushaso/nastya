@@ -121,10 +121,39 @@ header a {
   color: var(--accent);
 }
 
+/* Заголовки ОБО МНЕ, СО МНОЙ МОЖНО, ПОГНАЛИ */
+.section-title {
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 60px;
+  margin: 60px 0 40px;
+  text-align: center;
+  color: var(--accent);
+}
+
+/* ОБО МНЕ заголовок после кнопки */
+.gogol-text .about-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 32px;
+  font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 60px;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.gogol-text .about-button:hover {
+  color: var(--light);
+}
+
 /* ОБО МНЕ */
 .about-section {
   max-width: 1100px;
-  margin: 100px auto;
+  margin: 0 auto;
   padding: 0 8vw;
 }
 
@@ -171,13 +200,15 @@ header a {
   transform: rotate(6deg);
 }
 
-/* СО МНОЙ МОЖНО */
+/* СО МНОЙ МОЖНО блок */
 .withme-title {
-  text-align: center;
-  margin-top: 120px;
   font-family: 'Playfair Display', serif;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  font-weight: 400;
+  font-size: 60px;
+  text-align: center;
+  margin-top: 120px;
+  color: var(--accent);
 }
 
 .red-wrapper {
@@ -208,15 +239,18 @@ header a {
 
 .footer h2 {
   font-family: 'Playfair Display', serif;
+  font-weight: 400;
+  font-size: 60px;
   text-transform: uppercase;
-  letter-spacing: 3px;
+  letter-spacing: 0;
   margin-bottom: 30px;
+  color: var(--accent);
 }
 
 .footer p {
   max-width: 700px;
   margin: 0 auto 30px;
-  font-size: 18px;
+  font-size: 26px;
   font-family: 'Gogol', cursive;
 }
 
@@ -268,6 +302,18 @@ header a {
   .hero-text .name {
     font-size: 32px;
   }
+
+  .section-title {
+    font-size: 40px;
+  }
+
+  .gogol-text .about-button {
+    font-size: 40px;
+  }
+
+  .footer h2 {
+    font-size: 40px;
+  }
 }
 </style>
 </head>
@@ -293,7 +339,29 @@ header a {
     Если ты это читаешь, значит, ты всё-таки навёл камеру. Мне нравятся люди, которые действуют.
     <br>
     <a href="https://www.instagram.com/nastia_mois77/" class="button" target="_blank">СВЯЗАТЬСЯ</a>
+    <br>
+    <a href="#about" class="about-button">ОБО МНЕ</a>
   </div>
+</section>
+
+<h2 class="section-title" id="withme">СО МНОЙ МОЖНО</h2>
+
+<div class="red-wrapper">
+  <div class="red-block">
+    <p>🤍 спонтанно улететь в поездку</p>
+    <p>🤍 пробежать утренние 5 км</p>
+    <p>🤍 уехать куда-нибудь без лишних слов</p>
+    <p>🤍 выбрать лучший десерт в городе</p>
+    <p>🤍 и просто смеяться</p>
+  </div>
+</div>
+
+<section class="footer" id="go">
+  <h2>ПОГНАЛИ</h2>
+  <p>
+    Если ты чувствуешь скорость жизни так же, возможно нам по пути.
+  </p>
+  <a href="https://www.instagram.com/nastia_mois77/" class="button" target="_blank">INSTAGRAM</a>
 </section>
 
 <section class="about-section" id="about">
@@ -315,26 +383,6 @@ header a {
     </div>
     <img src="img/3.jpg" alt="">
   </div>
-</section>
-
-<h2 class="withme-title" id="withme">СО МНОЙ МОЖНО</h2>
-
-<div class="red-wrapper">
-  <div class="red-block">
-    <p>🤍 спонтанно улететь в поездку</p>
-    <p>🤍 пробежать утренние 5 км</p>
-    <p>🤍 уехать куда-нибудь без лишних слов</p>
-    <p>🤍 выбрать лучший десерт в городе</p>
-    <p>🤍 и просто смеяться</p>
-  </div>
-</div>
-
-<section class="footer" id="go">
-  <h2>ПОГНАЛИ</h2>
-  <p>
-    Если ты чувствуешь скорость жизни так же, возможно нам по пути.
-  </p>
-  <a href="https://www.instagram.com/nastia_mois77/" class="button" target="_blank">INSTAGRAM</a>
 </section>
 
 </body>
