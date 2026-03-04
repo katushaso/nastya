@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Настя</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 :root {
@@ -20,12 +20,12 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
   background: var(--light);
   color: var(--accent);
+  font-family: 'Montserrat', sans-serif;
 }
 
-/* ---------- ШАПКА ---------- */
+/* ШАПКА */
 
 header {
   display: flex;
@@ -41,23 +41,7 @@ header a {
   font-size: 16px;
 }
 
-/* ---------- ОБЩИЕ СЕКЦИИ ---------- */
-
-.section {
-  padding: 70px 8vw;
-  max-width: 1200px;
-  margin: auto;
-}
-
-h1, h2 {
-  font-family: 'Playfair Display', serif;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-/* ---------- HERO ---------- */
+/* HERO */
 
 .hero {
   text-align: center;
@@ -65,45 +49,84 @@ h1, h2 {
 }
 
 .hero h1 {
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
   font-size: 48px;
   margin-bottom: 50px;
 }
 
-/* ---------- ФОТО ---------- */
+/* ПЕРВАЯ ФОТО */
 
-.gallery {
+.hero-image {
   display: flex;
-  flex-direction: column;
-  gap: 25px;
-  max-width: 500px;
-  margin: 0 auto;
+  justify-content: center;
 }
 
-.gallery img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  border-radius: 20px;
+.hero-image img {
+  width: 420px;
+  transform: rotate(-6deg);
 }
 
-/* ---------- ОБО МНЕ ---------- */
+.gogol-text {
+  font-family: cursive;
+  font-size: 26px;
+  margin-top: 30px;
+}
+
+/* ОБО МНЕ */
+
+.about-section {
+  max-width: 1100px;
+  margin: 100px auto;
+  padding: 0 8vw;
+}
+
+.about-row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.about-row img {
+  width: 350px;
+}
 
 .about-text {
+  flex: 1;
   font-size: 18px;
   line-height: 1.7;
-  max-width: 750px;
-  margin: auto;
-  text-align: center;
 }
 
-/* ---------- ЗАГОЛОВОК ПЕРЕД АЛОЙ СЕКЦИЕЙ ---------- */
+/* НИЖНИЙ БЛОК */
+
+.travel-row {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin-top: 80px;
+}
+
+.travel-text {
+  flex: 1;
+  font-family: cursive;
+  font-size: 28px;
+}
+
+.travel-row img {
+  width: 350px;
+  transform: rotate(6deg);
+}
+
+/* СО МНОЙ МОЖНО */
 
 .withme-title {
   text-align: center;
-  padding-top: 40px;
+  margin-top: 120px;
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
 }
-
-/* ---------- АЛАЯ СЕКЦИЯ ---------- */
 
 .red-wrapper {
   display: flex;
@@ -120,32 +143,37 @@ h1, h2 {
 }
 
 .red-block p {
+  color: white;
   font-size: 22px;
   margin-bottom: 25px;
-  text-align: left;
-  color: white;
 }
 
-.red-block p span {
-  margin-right: 12px;
-}
-
-/* ---------- ПОГНАЛИ ---------- */
+/* ПОГНАЛИ */
 
 .footer {
   text-align: center;
-  padding-bottom: 80px;
+  padding: 80px 20px;
+}
+
+.footer h2 {
+  font-family: 'Playfair Display', serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-bottom: 30px;
+}
+
+.footer p {
+  max-width: 700px;
+  margin: 0 auto 30px;
+  font-size: 18px;
 }
 
 .button {
   display: inline-block;
-  margin-top: 25px;
   padding: 14px 32px;
   border: 1px solid var(--accent);
   text-decoration: none;
-  font-family: 'Playfair Display', serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
+  font-family: 'Montserrat', sans-serif;
   color: var(--accent);
   transition: 0.3s;
 }
@@ -155,15 +183,25 @@ h1, h2 {
   color: var(--light);
 }
 
-/* ---------- АДАПТИВ ---------- */
+/* АДАПТИВ */
 
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 34px;
+@media (max-width: 900px) {
+
+  .about-row,
+  .travel-row {
+    flex-direction: column;
+    text-align: center;
   }
 
-  .red-block {
-    padding: 50px 30px;
+  .hero-image img,
+  .about-row img,
+  .travel-row img {
+    width: 80%;
+    transform: none;
+  }
+
+  .gogol-text {
+    font-size: 22px;
   }
 }
 </style>
@@ -180,42 +218,53 @@ h1, h2 {
 <section class="hero">
   <h1>ПРИВЕТ, Я — НАСТЯ</h1>
 
-  <div class="gallery">
+  <div class="hero-image">
     <img src="img/21.jpg" alt="">
+  </div>
+
+  <div class="gogol-text">
+    Если ты это читаешь, значит, ты всё-таки навёл камеру. Мне нравятся люди, которые действуют.
+  </div>
+</section>
+
+<section class="about-section" id="about">
+
+  <div class="about-row">
     <img src="img/2.jpg" alt="">
+    <div class="about-text">
+      <p>
+        Мне сложно усидеть на месте. Тренирую фигурному катанию. Бегаю, катаюсь на горных лыжах, люблю велосипед и дорогу без пробок. Вожу машину и люблю скорость. Не ради риска, а ради ощущения жизни. Ценю хорошие рестораны за атмосферу, внимание к деталям и ощущение, когда всё сделано с уважением к человеку.
+      </p>
+    </div>
+  </div>
+
+  <div class="travel-row">
+    <div class="travel-text">
+      люблю путешествия. и спонтанные, и запланированные.
+    </div>
     <img src="img/3.jpg" alt="">
   </div>
+
 </section>
 
-<section class="section" id="about">
-  <h2>ОБО МНЕ</h2>
-  <div class="about-text">
-    Мне сложно усидеть на месте. Тренирую фигурному катанию.
-    Бегаю, катаюсь на горных лыжах, люблю велосипед и дорогу без пробок.
-    Вожу машину и люблю скорость. Не ради риска, а ради ощущения жизни.
-    Люблю путешествия. И спонтанные, и запланированные.
-    Люблю хорошие рестораны за атмосферу, внимание к деталям и ощущение, когда всё сделано с уважением к человеку.
-  </div>
-</section>
-
-<section class="withme-title">
-  <h2 id="withme">СО МНОЙ МОЖНО</h2>
-</section>
+<h2 class="withme-title" id="withme">СО МНОЙ МОЖНО</h2>
 
 <div class="red-wrapper">
   <div class="red-block">
-    <p><span>🤍</span>спонтанно улететь в поездку</p>
-    <p><span>🤍</span>пробежать утренние 5 км</p>
-    <p><span>🤍</span>уехать куда-нибудь без лишних слов</p>
-    <p><span>🤍</span>выбрать лучший десерт в городе</p>
-    <p><span>🤍</span>и просто смеяться</p>
+    <p>🤍 спонтанно улететь в поездку</p>
+    <p>🤍 пробежать утренние 5 км</p>
+    <p>🤍 уехать куда-нибудь без лишних слов</p>
+    <p>🤍 выбрать лучший десерт в городе</p>
+    <p>🤍 и просто смеяться</p>
   </div>
 </div>
 
-<section class="section footer" id="go">
+<section class="footer" id="go">
   <h2>ПОГНАЛИ</h2>
-  <p>Если ты чувствуешь скорость жизни так же, возможно нам по пути.</p>
-  <a href="#" class="button">Instagram</a>
+  <p>
+    Если ты чувствуешь скорость жизни так же, возможно нам по пути.
+  </p>
+  <a href="#" class="button">Связаться</a>
 </section>
 
 </body>
