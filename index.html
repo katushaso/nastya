@@ -5,13 +5,13 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Настя</title>
 
-<!-- Подключаем Playfair Display, Montserrat и "рукописный" шрифт -->
+<!-- Подключаем шрифты -->
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;600&family=Gochi+Hand&display=swap" rel="stylesheet">
 
 <style>
 :root {
   --light: #fcfaee;
-  --accent: #8e1600; /* новый цвет */
+  --accent: #8e1600;
 }
 
 * {
@@ -58,12 +58,12 @@ header a {
 
 .hero-image img {
   width: 100%;
-  height: 560px; /* фиксируем соотношение */
+  height: 560px;
   object-fit: cover;
   transform: rotate(-6deg);
 }
 
-/* Текст поверх фото */
+/* Заголовок поверх фото */
 .hero-text {
   position: absolute;
   top: 20%;
@@ -71,7 +71,7 @@ header a {
   color: var(--accent);
   text-transform: uppercase;
   font-family: 'Playfair Display', serif;
-  font-weight: 400; /* не жирный */
+  font-weight: 400;
 }
 
 .hero-text .hello {
@@ -85,9 +85,10 @@ header a {
   margin-top: -10px;
 }
 
-/* Текст "Гоголь" */
-.gogol-text {
-  font-family: 'Gochi Hand', cursive;
+/* Гоголь-текст */
+.gogol-text,
+.gogol-text * {
+  font-family: 'Gochi Hand', cursive !important;
   font-size: 26px;
   margin-top: 30px;
   line-height: 1.6;
@@ -100,7 +101,6 @@ header a {
   padding: 14px 32px;
   border: 1px solid var(--accent);
   text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
   color: var(--accent);
   transition: 0.3s;
   border-radius: 12px;
@@ -126,7 +126,7 @@ header a {
 
 .about-row img {
   width: 350px;
-  height: 466px; /* подгоняем под первую */
+  height: 466px;
   object-fit: cover;
 }
 
@@ -137,7 +137,7 @@ header a {
 }
 
 .about-text p {
-  margin-bottom: 20px; /* явный разрыв между абзацами */
+  margin-bottom: 20px;
 }
 
 /* НИЖНИЙ БЛОК */
@@ -156,7 +156,7 @@ header a {
 
 .travel-row img {
   width: 350px;
-  height: 466px; /* под первую */
+  height: 466px;
   object-fit: cover;
   transform: rotate(6deg);
 }
@@ -211,12 +211,12 @@ header a {
 
 /* Кнопка футера INSTAGRAM */
 .footer .button {
-  padding: 14px 32px; /* одинаковый размер с верхней */
+  padding: 14px 32px;
+  border-radius: 12px;
 }
 
 /* АДАПТИВ */
 @media (max-width: 900px) {
-
   .about-row,
   .travel-row {
     flex-direction: column;
@@ -276,7 +276,6 @@ header a {
 </section>
 
 <section class="about-section" id="about">
-
   <div class="about-row">
     <img src="img/2.jpg" alt="">
     <div class="about-text">
@@ -295,7 +294,6 @@ header a {
     </div>
     <img src="img/3.jpg" alt="">
   </div>
-
 </section>
 
 <h2 class="withme-title" id="withme">СО МНОЙ МОЖНО</h2>
