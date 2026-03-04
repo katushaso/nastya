@@ -51,7 +51,7 @@ header a {
 /* HERO */
 .hero {
   text-align: center;
-  padding: 60px 8vw 40px;
+  padding: 80px 8vw 40px; /* больше верхний отступ */
 }
 
 .hero-image {
@@ -60,7 +60,7 @@ header a {
   justify-content: center;
   width: 100%;
   max-width: 420px;
-  margin: 0 auto;
+  margin: 0 auto 40px;
 }
 
 .hero-image img {
@@ -73,8 +73,12 @@ header a {
 /* Заголовок поверх фото */
 .hero-text {
   position: absolute;
-  top: 20%;
-  left: 20%;
+  top: 10%; /* выше */
+  left: 10%; 
+  right: 10%;
+  display: flex;
+  justify-content: space-between; /* разнести по сторонам */
+  width: 100%;
   color: var(--accent);
   text-transform: uppercase;
   font-family: 'Playfair Display', serif;
@@ -83,13 +87,10 @@ header a {
 
 .hero-text .hello {
   font-size: 60px;
-  display: block;
 }
 
 .hero-text .name {
   font-size: 48px;
-  display: block;
-  margin-top: -10px;
 }
 
 /* Гоголь-текст */
@@ -106,19 +107,21 @@ header a {
   margin-top: 20px;
   display: inline-block;
   padding: 14px 32px;
-  border: none;
   text-decoration: none;
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
+  font-size: 16px;
   background: var(--accent);
   color: var(--light);
-  transition: 0.3s;
+  border: 2px solid var(--accent);
   border-radius: 12px;
+  transition: 0.3s;
 }
 
 .gogol-text .button:hover {
-  background: var(--light);
+  background: transparent;
   color: var(--accent);
+  border: 2px solid var(--accent);
 }
 
 /* ОБО МНЕ заголовок */
@@ -167,6 +170,7 @@ header a {
   align-items: center;
   gap: 60px;
   margin-top: 80px;
+  overflow: visible; /* чтобы фото вылезало за экран */
 }
 
 .travel-text {
@@ -179,7 +183,8 @@ header a {
   width: 350px;
   height: 466px;
   object-fit: cover;
-  transform: rotate(6deg);
+  transform: rotate(15deg); /* угол больше, немного вылезает */
+  margin-left: auto; /* уголочком справа */
 }
 
 /* СО МНОЙ МОЖНО */
@@ -240,15 +245,17 @@ header a {
   padding: 14px 32px;
   border-radius: 12px;
   font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
   background: var(--accent);
   color: var(--light);
-  border: none;
+  border: 2px solid var(--accent);
   transition: 0.3s;
 }
 
 .footer .button:hover {
-  background: var(--light);
+  background: transparent;
   color: var(--accent);
+  border: 2px solid var(--accent);
 }
 
 /* Адаптив */
@@ -273,11 +280,15 @@ header a {
 
   .hero-text {
     top: 15%;
-    left: 10%;
+    flex-direction: column;
+    justify-content: center;
+    left: 0;
+    right: 0;
   }
 
   .hero-text .hello {
     font-size: 40px;
+    margin-bottom: 10px;
   }
 
   .hero-text .name {
