@@ -5,7 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Настя</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+<!-- Подключаем Playfair Display, Montserrat и "рукописный" шрифт -->
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;600&family=Gochi+Hand&display=swap" rel="stylesheet">
 
 <style>
 :root {
@@ -26,7 +27,6 @@ body {
 }
 
 /* ШАПКА */
-
 header {
   display: flex;
   justify-content: center;
@@ -42,7 +42,6 @@ header a {
 }
 
 /* HERO */
-
 .hero {
   text-align: center;
   padding: 60px 8vw 40px;
@@ -59,8 +58,8 @@ header a {
 
 .hero-image img {
   width: 100%;
-  height: 560px; /* задаем высоту как у первой картинки */
-  object-fit: cover; /* подгоняем соотношение сторон */
+  height: 560px; /* фиксируем соотношение */
+  object-fit: cover;
   transform: rotate(-6deg);
 }
 
@@ -86,21 +85,33 @@ header a {
   margin-top: -10px;
 }
 
+/* Текст "Гоголь" */
 .gogol-text {
-  font-family: cursive;
+  font-family: 'Gochi Hand', cursive;
   font-size: 26px;
   margin-top: 30px;
   line-height: 1.6;
 }
 
-/* Кнопка под текстом */
+/* Кнопка СВЯЗАТЬСЯ под текстом */
 .gogol-text .button {
   margin-top: 20px;
   display: inline-block;
+  padding: 14px 32px;
+  border: 1px solid var(--accent);
+  text-decoration: none;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--accent);
+  transition: 0.3s;
+  border-radius: 12px;
+}
+
+.gogol-text .button:hover {
+  background: var(--accent);
+  color: var(--light);
 }
 
 /* ОБО МНЕ */
-
 .about-section {
   max-width: 1100px;
   margin: 100px auto;
@@ -115,7 +126,7 @@ header a {
 
 .about-row img {
   width: 350px;
-  height: 466px; /* подгоняем под высоту первой картинки */
+  height: 466px; /* подгоняем под первую */
   object-fit: cover;
 }
 
@@ -130,7 +141,6 @@ header a {
 }
 
 /* НИЖНИЙ БЛОК */
-
 .travel-row {
   display: flex;
   align-items: center;
@@ -140,19 +150,18 @@ header a {
 
 .travel-text {
   flex: 1;
-  font-family: cursive;
+  font-family: 'Gochi Hand', cursive;
   font-size: 28px;
 }
 
 .travel-row img {
   width: 350px;
-  height: 466px; /* подгоняем под первую */
+  height: 466px; /* под первую */
   object-fit: cover;
   transform: rotate(6deg);
 }
 
 /* СО МНОЙ МОЖНО */
-
 .withme-title {
   text-align: center;
   margin-top: 120px;
@@ -181,26 +190,7 @@ header a {
   margin-bottom: 25px;
 }
 
-/* КНОПКИ */
-
-.button {
-  display: inline-block;
-  padding: 14px 32px;
-  border: 1px solid var(--accent);
-  text-decoration: none;
-  font-family: 'Montserrat', sans-serif;
-  color: var(--accent);
-  transition: 0.3s;
-  border-radius: 12px;
-}
-
-.button:hover {
-  background: var(--accent);
-  color: var(--light);
-}
-
 /* ФУТЕР */
-
 .footer {
   text-align: center;
   padding: 80px 20px;
@@ -219,8 +209,12 @@ header a {
   font-size: 18px;
 }
 
-/* АДАПТИВ */
+/* Кнопка футера INSTAGRAM */
+.footer .button {
+  padding: 14px 32px; /* одинаковый размер с верхней */
+}
 
+/* АДАПТИВ */
 @media (max-width: 900px) {
 
   .about-row,
