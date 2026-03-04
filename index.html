@@ -3,14 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Настя</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 :root {
-  --accent: #C1121F;
+  --light: #fcfaee;
+  --accent: #7f262c;
 }
 
 * {
@@ -21,28 +21,30 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background: #ffffff;
+  background: var(--light);
   color: var(--accent);
 }
+
+/* ---------- ШАПКА ---------- */
 
 header {
   display: flex;
   justify-content: center;
   gap: 60px;
-  padding: 30px 0;
+  padding: 25px 0;
   font-family: 'Playfair Display', serif;
-  text-transform: uppercase;
-  letter-spacing: 2px;
 }
 
 header a {
   text-decoration: none;
   color: var(--accent);
-  font-size: 14px;
+  font-size: 16px;
 }
 
+/* ---------- ОБЩИЕ СЕКЦИИ ---------- */
+
 .section {
-  padding: 60px 8vw;
+  padding: 70px 8vw;
   max-width: 1200px;
   margin: auto;
 }
@@ -50,81 +52,119 @@ header a {
 h1, h2 {
   font-family: 'Playfair Display', serif;
   text-transform: uppercase;
-  margin-bottom: 30px;
   letter-spacing: 3px;
+  margin-bottom: 30px;
+  text-align: center;
 }
+
+/* ---------- HERO ---------- */
 
 .hero {
   text-align: center;
-  padding: 80px 8vw 40px;
+  padding: 60px 8vw 40px;
 }
 
 .hero h1 {
   font-size: 48px;
+  margin-bottom: 50px;
 }
+
+/* ---------- ФОТО (КАК В МОБИЛЬНОЙ ВЕРСИИ) ---------- */
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ---------- ОБО МНЕ ---------- */
 
 .about-text {
   font-size: 18px;
   line-height: 1.7;
-  max-width: 800px;
+  max-width: 750px;
   margin: auto;
+  text-align: center;
+}
+
+/* ---------- ЗАГОЛОВОК ПЕРЕД АЛОЙ СЕКЦИЕЙ ---------- */
+
+.withme-title {
+  background: var(--light);
+  text-align: center;
+  padding-top: 40px;
+}
+
+/* ---------- АЛАЯ СЕКЦИЯ ---------- */
+
+.red-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 40px 20px 80px;
 }
 
 .red-block {
   background: var(--accent);
-  padding: 120px 10vw;
-  display: flex;
-  justify-content: center;
-}
-
-.red-block-inner {
-  max-width: 600px;
+  border-radius: 30px;
+  padding: 80px 60px;
+  max-width: 700px;
   width: 100%;
 }
 
-.red-block h2 {
-  color: white;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
 .red-block p {
-  font-family: 'Montserrat', sans-serif;
   font-size: 22px;
   margin-bottom: 25px;
   text-align: left;
   color: white;
 }
 
+.red-block p span {
+  color: white;
+  margin-right: 10px;
+}
+
+/* ---------- ПОГНАЛИ ---------- */
+
 .footer {
   text-align: center;
-  padding: 60px 20px;
+  padding-bottom: 80px;
 }
 
 .button {
   display: inline-block;
-  margin-top: 20px;
-  padding: 14px 30px;
+  margin-top: 25px;
+  padding: 14px 32px;
   border: 1px solid var(--accent);
   text-decoration: none;
   font-family: 'Playfair Display', serif;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: var(--accent);
+  transition: 0.3s;
 }
 
 .button:hover {
   background: var(--accent);
-  color: white;
-  transition: 0.3s;
+  color: var(--light);
 }
+
+/* ---------- АДАПТИВ ---------- */
 
 @media (max-width: 768px) {
   .hero h1 {
     font-size: 34px;
   }
-  header {
-    gap: 30px;
+
+  .red-block {
+    padding: 50px 30px;
   }
 }
 </style>
@@ -133,36 +173,45 @@ h1, h2 {
 <body>
 
 <header>
-  <a href="#about">ОБО МНЕ</a>
-  <a href="#withme">СО МНОЙ МОЖНО</a>
-  <a href="#go">ПОГНАЛИ</a>
+  <a href="#about">Обо мне</a>
+  <a href="#withme">Со мной можно</a>
+  <a href="#go">Погнали</a>
 </header>
 
 <section class="hero">
   <h1>ПРИВЕТ, Я — НАСТЯ</h1>
+
+  <div class="gallery">
+    <img src="photo1.jpg" alt="">
+    <img src="photo2.jpg" alt="">
+    <img src="photo3.jpg" alt="">
+  </div>
 </section>
 
 <section class="section" id="about">
   <h2>ОБО МНЕ</h2>
   <div class="about-text">
-    Мне сложно усидеть на месте. Тренирую фигурному катанию.  
-    Бегаю, катаюсь на горных лыжах, люблю велосипед и дорогу без пробок.  
-    Вожу машину и люблю скорость. Не ради риска, а ради ощущения жизни.  
-    Люблю путешествия. И спонтанные, и запланированные.  
+    Мне сложно усидеть на месте. Тренирую фигурному катанию.
+    Бегаю, катаюсь на горных лыжах, люблю велосипед и дорогу без пробок.
+    Вожу машину и люблю скорость. Не ради риска, а ради ощущения жизни.
+    Люблю путешествия. И спонтанные, и запланированные.
     Люблю хорошие рестораны за атмосферу, внимание к деталям и ощущение, когда всё сделано с уважением к человеку.
   </div>
 </section>
 
-<section class="red-block" id="withme">
-  <div class="red-block-inner">
-    <h2>СО МНОЙ МОЖНО</h2>
-    <p>❤ спонтанно улететь в поездку</p>
-    <p>❤ пробежать утренние 5 км</p>
-    <p>❤ уехать куда-нибудь без лишних слов</p>
-    <p>❤ выбрать лучший десерт в городе</p>
-    <p>❤ и просто смеяться</p>
-  </div>
+<section class="withme-title">
+  <h2 id="withme">СО МНОЙ МОЖНО</h2>
 </section>
+
+<div class="red-wrapper">
+  <div class="red-block">
+    <p><span>❤</span>спонтанно улететь в поездку</p>
+    <p><span>❤</span>пробежать утренние 5 км</p>
+    <p><span>❤</span>уехать куда-нибудь без лишних слов</p>
+    <p><span>❤</span>выбрать лучший десерт в городе</p>
+    <p><span>❤</span>и просто смеяться</p>
+  </div>
+</div>
 
 <section class="section footer" id="go">
   <h2>ПОГНАЛИ</h2>
