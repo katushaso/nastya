@@ -33,7 +33,7 @@ body {
   font-style: normal;
 }
 
-/* ШАПКА */
+/* Шапка */
 header {
   display: flex;
   justify-content: center;
@@ -121,36 +121,18 @@ header a {
   color: var(--accent);
 }
 
-/* Заголовки ОБО МНЕ, СО МНОЙ МОЖНО, ПОГНАЛИ */
-.section-title {
+/* ОБО МНЕ заголовок */
+.about-title {
   font-family: 'Playfair Display', serif;
   text-transform: uppercase;
   font-weight: 400;
   font-size: 60px;
-  margin: 60px 0 40px;
   text-align: center;
+  margin: 100px 0 40px;
   color: var(--accent);
 }
 
-/* ОБО МНЕ заголовок после кнопки */
-.gogol-text .about-button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 14px 32px;
-  font-family: 'Playfair Display', serif;
-  font-weight: 400;
-  font-size: 60px;
-  text-transform: uppercase;
-  color: var(--accent);
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.gogol-text .about-button:hover {
-  color: var(--light);
-}
-
-/* ОБО МНЕ */
+/* ОБО МНЕ секция */
 .about-section {
   max-width: 1100px;
   margin: 0 auto;
@@ -179,7 +161,7 @@ header a {
   margin-bottom: 20px;
 }
 
-/* НИЖНИЙ БЛОК */
+/* Travel row */
 .travel-row {
   display: flex;
   align-items: center;
@@ -200,7 +182,7 @@ header a {
   transform: rotate(6deg);
 }
 
-/* СО МНОЙ МОЖНО блок */
+/* СО МНОЙ МОЖНО */
 .withme-title {
   font-family: 'Playfair Display', serif;
   text-transform: uppercase;
@@ -231,7 +213,7 @@ header a {
   margin-bottom: 25px;
 }
 
-/* ФУТЕР */
+/* Футер */
 .footer {
   text-align: center;
   padding: 80px 20px;
@@ -242,7 +224,6 @@ header a {
   font-weight: 400;
   font-size: 60px;
   text-transform: uppercase;
-  letter-spacing: 0;
   margin-bottom: 30px;
   color: var(--accent);
 }
@@ -270,7 +251,7 @@ header a {
   color: var(--accent);
 }
 
-/* АДАПТИВ */
+/* Адаптив */
 @media (max-width: 900px) {
   .about-row,
   .travel-row {
@@ -303,14 +284,8 @@ header a {
     font-size: 32px;
   }
 
-  .section-title {
-    font-size: 40px;
-  }
-
-  .gogol-text .about-button {
-    font-size: 40px;
-  }
-
+  .about-title,
+  .withme-title,
   .footer h2 {
     font-size: 40px;
   }
@@ -339,32 +314,11 @@ header a {
     Если ты это читаешь, значит, ты всё-таки навёл камеру. Мне нравятся люди, которые действуют.
     <br>
     <a href="https://www.instagram.com/nastia_mois77/" class="button" target="_blank">СВЯЗАТЬСЯ</a>
-    <br>
-    <a href="#about" class="about-button">ОБО МНЕ</a>
   </div>
-</section>
-
-<h2 class="section-title" id="withme">СО МНОЙ МОЖНО</h2>
-
-<div class="red-wrapper">
-  <div class="red-block">
-    <p>🤍 спонтанно улететь в поездку</p>
-    <p>🤍 пробежать утренние 5 км</p>
-    <p>🤍 уехать куда-нибудь без лишних слов</p>
-    <p>🤍 выбрать лучший десерт в городе</p>
-    <p>🤍 и просто смеяться</p>
-  </div>
-</div>
-
-<section class="footer" id="go">
-  <h2>ПОГНАЛИ</h2>
-  <p>
-    Если ты чувствуешь скорость жизни так же, возможно нам по пути.
-  </p>
-  <a href="https://www.instagram.com/nastia_mois77/" class="button" target="_blank">INSTAGRAM</a>
 </section>
 
 <section class="about-section" id="about">
+  <h2 class="about-title">ОБО МНЕ</h2>
   <div class="about-row">
     <img src="img/2.jpg" alt="">
     <div class="about-text">
@@ -383,6 +337,26 @@ header a {
     </div>
     <img src="img/3.jpg" alt="">
   </div>
+</section>
+
+<h2 class="withme-title" id="withme">СО МНОЙ МОЖНО</h2>
+
+<div class="red-wrapper">
+  <div class="red-block">
+    <p>🤍 спонтанно улететь в поездку</p>
+    <p>🤍 пробежать утренние 5 км</p>
+    <p>🤍 уехать куда-нибудь без лишних слов</p>
+    <p>🤍 выбрать лучший десерт в городе</p>
+    <p>🤍 и просто смеяться</p>
+  </div>
+</div>
+
+<section class="footer" id="go">
+  <h2>ПОГНАЛИ</h2>
+  <p>
+    Если ты чувствуешь скорость жизни так же, возможно нам по пути.
+  </p>
+  <a href="https://www.instagram.com/nastia_mois77/" class="button" target="_blank">INSTAGRAM</a>
 </section>
 
 </body>
