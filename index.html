@@ -3,11 +3,18 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Отклик сердца</title>
+<title>Привет, я — Настя</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400&family=Marck+Script&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
+
+@font-face {
+  font-family: 'Gogol';
+  src: url('fonts/Gogol.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
 
 :root {
   --bg: #F3EEE7;
@@ -19,15 +26,15 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
   background: var(--bg);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   color: var(--text);
 }
 
-/* ОБЩИЕ ОТСТУПЫ ОТ КРАЁВ */
 .section-padding {
   padding: 100px 8vw;
 }
@@ -42,6 +49,16 @@ nav {
   letter-spacing: 2px;
 }
 
+nav a {
+  text-decoration: none;
+  color: inherit;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  opacity: 0.6;
+}
+
 /* HERO */
 
 .hero {
@@ -54,7 +71,7 @@ nav {
 .hero-title {
   font-family: 'Playfair Display', serif;
   font-size: clamp(70px, 9vw, 150px);
-  line-height: 0.85;
+  line-height: 0.9;
 }
 
 .hero-title span {
@@ -64,23 +81,13 @@ nav {
 }
 
 .script {
-  font-family: 'Marck Script', cursive;
+  font-family: 'Gogol', cursive;
   font-size: 30px;
   margin: 40px 0 60px;
+  max-width: 600px;
 }
 
-.button {
-  display: inline-block;
-  padding: 20px 60px;
-  background: var(--accent);
-  color: white;
-  border-radius: 60px;
-  text-decoration: none;
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 22px;
-}
-
-/* ФОТО */
+/* HERO IMAGES */
 
 .hero-images {
   position: relative;
@@ -135,7 +142,7 @@ nav {
   box-shadow: 0 40px 80px rgba(0,0,0,0.2);
 }
 
-/* RED BLOCK FULL WIDTH */
+/* RED BLOCK */
 
 .red-block {
   background: var(--accent);
@@ -153,12 +160,12 @@ nav {
 
 .footer-note {
   text-align: center;
-  padding: 100px 0;
-  font-size: 14px;
-  opacity: 0.6;
+  padding: 120px 8vw;
+  font-size: 32px;
+  font-family: 'Gogol', cursive;
 }
 
-/* ====== MOBILE ====== */
+/* MOBILE */
 
 @media (max-width: 1000px) {
 
@@ -187,6 +194,10 @@ nav {
     width: 100%;
   }
 
+  nav {
+    gap: 30px;
+  }
+
 }
 
 </style>
@@ -196,10 +207,9 @@ nav {
 
 <div class="section-padding">
 <nav>
-  <div>Обо мне</div>
-  <div>О проекте</div>
-  <div>Отзывы</div>
-  <div>FAQ</div>
+  <a href="#about">Обо мне</a>
+  <a href="#withme">Со мной можно</a>
+  <a href="#contact">Погнали</a>
 </nav>
 </div>
 
@@ -207,15 +217,14 @@ nav {
 
   <div>
     <div class="hero-title">
-      ОТКЛИК
-      <span>СЕРДЦА</span>
+      Привет,
+      <span>я — Настя</span>
     </div>
 
     <div class="script">
-      самый душевный и бережный проект
+      Если ты это читаешь, значит, ты всё-таки навёл камеру.
+      Мне нравятся люди, которые действуют.
     </div>
-
-    <a href="#" class="button">Присоединиться</a>
   </div>
 
   <div class="hero-images">
@@ -225,13 +234,16 @@ nav {
 
 </div>
 
-<div class="about section-padding">
+<div class="about section-padding" id="about">
 
   <div>
-    <h2>ОБО МНЕ</h2>
-    <p>Я дипломированный психолог и точно чувствую людей.</p>
-    <p>Работаю с голосом, душой и телом.</p>
-    <p>Открываю красоту и таланты в девушках.</p>
+    <h2>Обо мне</h2>
+
+    <p>Мне сложно усидеть на месте.</p>
+    <p>Тренирую фигурному катанию. Бегаю, катаюсь на горных лыжах, люблю велосипед и дорогу без пробок.</p>
+    <p>Вожу машину и люблю скорость. Не ради риска, а ради ощущения жизни.</p>
+    <p>Люблю путешествия. И спонтанные, и запланированные.</p>
+    <p>Люблю хорошие рестораны за атмосферу, внимание к деталям и ощущение, когда всё сделано с уважением к человеку.</p>
   </div>
 
   <div>
@@ -240,14 +252,16 @@ nav {
 
 </div>
 
-<div class="red-block">
-  <p>❤ Самые мощные практики.</p>
-  <p>❤ Глубокая трансформация.</p>
-  <p>❤ Поддержка и бережность.</p>
+<div class="red-block" id="withme">
+  <p>❤ спонтанно улететь в поездку</p>
+  <p>❤ пробежать утренние 5 км</p>
+  <p>❤ уехать куда-нибудь без лишних слов</p>
+  <p>❤ выбрать лучший десерт в городе</p>
+  <p>❤ и просто смеяться</p>
 </div>
 
-<div class="footer-note">
-  если хочешь такую же футболку, пиши: @твойконтакт
+<div class="footer-note" id="contact">
+  Если ты чувствуешь скорость жизни так же, возможно нам по пути.
 </div>
 
 </body>
