@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Настя</title>
 
-<!-- Подключаем шрифты -->
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;600&family=Gochi+Hand&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
 :root {
@@ -24,6 +23,14 @@ body {
   background: var(--light);
   color: var(--accent);
   font-family: 'Montserrat', sans-serif;
+}
+
+/* Подключаем Gogol */
+@font-face {
+  font-family: 'Gogol';
+  src: url('fonts/gogol_regular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 /* ШАПКА */
@@ -88,7 +95,7 @@ header a {
 /* Гоголь-текст */
 .gogol-text,
 .gogol-text * {
-  font-family: 'Gochi Hand', cursive !important;
+  font-family: 'Gogol', cursive !important;
   font-size: 26px;
   margin-top: 30px;
   line-height: 1.6;
@@ -150,7 +157,7 @@ header a {
 
 .travel-text {
   flex: 1;
-  font-family: 'Gochi Hand', cursive;
+  font-family: 'Gogol', cursive;
   font-size: 28px;
 }
 
